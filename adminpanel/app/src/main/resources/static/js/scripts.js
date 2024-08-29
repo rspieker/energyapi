@@ -75,7 +75,7 @@ $(document).ready(function() {
             const statusText = meter.status ? 'On' : 'Off';
             const row = `<tr>
                 <td>${meter.id}</td>
-                <td>${meter.location}</td>
+                <td>${encodeuri(meter.location)}</td>
                 <td>${statusText}</td>
                 <td>
                   <a href="/meter-details.html?id=${meter.id}" class="btn btn-info btn-sm">Details</a>
